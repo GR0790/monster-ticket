@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#7c3aed" />
+    <meta name="theme-color" content="#65a30d" />
     <link rel="preconnect" href="https://cdn.channel.io" />
     <link rel="preload" as="image" href="/monster-mascot.webp" />
 
@@ -116,20 +116,20 @@
             <p style="font-size:13px; color:#666; margin-bottom:20px; line-height:1.5;">
                 상담 기록 유지를 위해<br>최초 1회 정보를 입력해주세요.
             </p>
-            
+
             <div style="text-align:left; margin-bottom:8px; font-size:12px; font-weight:bold; color:#555; padding-left:4px;">이름</div>
             <input type="text" id="user-name" placeholder="예: 홍길동" style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:10px; box-sizing:border-box; font-size:15px;">
-            
+
             <div style="text-align:left; margin-bottom:8px; font-size:12px; font-weight:bold; color:#555; padding-left:4px;">휴대폰 번호</div>
             <input type="tel" id="user-phone" maxlength="13" placeholder="010-0000-0000" oninput="autoHyphen(this)" style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:10px; box-sizing:border-box; font-size:15px;">
-            
+
             <label class="checkbox-container">
                 <input type="checkbox" id="privacy-check" onchange="checkValidation()">
                 개인정보 수집 및 이용 동의 (필수)
             </label>
-            
-            <button id="submit-btn" onclick="submitUserInfo()" disabled style="width:100%; padding:16px; background:#7c3aed; color:white; border:none; border-radius:12px; font-weight:bold; font-size:17px; cursor:pointer; box-shadow:0 4px 6px rgba(124, 58, 237, 0.2); transition: background 0.3s;">상담 시작하기</button>
-            
+
+            <button id="submit-btn" onclick="submitUserInfo()" disabled style="width:100%; padding:16px; background:#65a30d; color:white; border:none; border-radius:12px; font-weight:bold; font-size:17px; cursor:pointer; box-shadow:0 4px 6px rgba(101, 163, 13, 0.2); transition: background 0.3s;">상담 시작하기</button>
+
             <button onclick="closeModal()" style="position:absolute; top:15px; right:15px; background:none; border:none; font-size:20px; color:#999; cursor:pointer;">&times;</button>
         </div>
     </div>
@@ -200,3 +200,4 @@
     </script>
   </body>
 </html>
+
