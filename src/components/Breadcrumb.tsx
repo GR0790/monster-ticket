@@ -19,7 +19,7 @@ const Breadcrumb: React.FC<{ items: Crumb[] }> = ({ items }) => (
                 {item.label}
               </span>
             ) : (
-              <Link to={item.path} className="hover:text-violet-600 hover:underline transition-colors">
+              <Link to={item.path} className="hover:text-lime-600 hover:underline transition-colors">
                 {item.label}
               </Link>
             )}
@@ -31,3 +31,4 @@ const Breadcrumb: React.FC<{ items: Crumb[] }> = ({ items }) => (
 );
 
 export default Breadcrumb;
+
