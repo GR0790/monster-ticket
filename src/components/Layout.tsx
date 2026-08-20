@@ -37,21 +37,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center">
               <Link
                 to="/"
-                className="text-2xl font-bold text-violet-600 hover:text-violet-700 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 rounded"
+                className="text-2xl font-bold text-lime-600 hover:text-lime-700 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 rounded"
                 aria-label="몬스터티켓 홈페이지로 이동"
               >
                 몬스터티켓
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <Link to="/" className="text-gray-700 hover:text-violet-600 transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-lime-600 transition-colors">
                 홈
               </Link>
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-gray-700 hover:text-violet-600 transition-colors"
+                  className="text-gray-700 hover:text-lime-600 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -59,7 +59,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <a
                 href="#"
                 onClick={handleConsultClick}
-                className="bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 transition-colors"
+                className="bg-lime-600 text-white px-4 py-2 rounded-lg hover:bg-lime-700 transition-colors"
               >
                 24시간 빠른상담
               </a>
@@ -67,7 +67,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 rounded p-2"
+              className="md:hidden focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 rounded p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기"}
               aria-expanded={mobileMenuOpen}
@@ -97,7 +97,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <a
                   href="#"
                   onClick={handleConsultClick}
-                  className="block mx-4 mt-4 bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 transition-colors text-center"
+                  className="block mx-4 mt-4 bg-lime-600 text-white px-4 py-2 rounded-lg hover:bg-lime-700 transition-colors text-center"
                 >
                   24시간 빠른상담
                 </a>
@@ -184,7 +184,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <p className="mt-2 text-xs md:text-sm leading-relaxed max-w-4xl mx-auto">
               본 웹사이트는 소액결제, 정보이용료, 신용카드, 상품권 현금화 서비스 이용 전
               확인해야 할 비교·안전 정보를 제공하는 목적으로 운영됩니다. 서비스 이용 전 반드시
-              이용약관
+              이용약관 및 개인정보처리방침을 확인하시기 바랍니다. 과도한 현금화 서비스 이용은
               개인의 재정 상황에 부담을 줄 수 있으니 신중한 판단 후 이용해 주시기 바라며,
               불법적인 목적으로 서비스를 이용하는 것을 엄격히 금지합니다.
             </p>
@@ -210,7 +210,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </button>
             <p className="font-bold text-gray-800 text-sm mb-1">궁금한 건 채팅으로 문의하세요</p>
             <p className="text-xs text-gray-500 flex items-center">
-              <span className="text-violet-500 mr-1">⚡</span> 빠르게 답변 받으실 수 있어요
+              <span className="text-lime-500 mr-1">⚡</span> 빠르게 답변 받으실 수 있어요
             </p>
             <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45 border-r border-b border-gray-100" />
           </div>
@@ -219,7 +219,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <button
           id="floating-consult-btn"
           onClick={handleConsultClick}
-          className="w-16 h-16 bg-[#5C31D6] rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 group relative overflow-hidden pointer-events-auto"
+          className="w-16 h-16 bg-[#65a30d] rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 group relative overflow-hidden pointer-events-auto"
           aria-label="1:1 상담 시작하기"
         >
           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -235,3 +235,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+
