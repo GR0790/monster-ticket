@@ -21,15 +21,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const navLinks = [
-    { to: "/fee-guide", label: 수수료 비교 },
-    { to: "/checklist", label: 업체 체크리스트 },
-    { to: "/authentic-review", label: 후기 구별법 },
-    { to: "/how-to-use", label: 이용 방법 },
-    { to: "/faq", label: 자주묻는질문 },
+    { to: "/fee-guide", label: "수수료 비교" },
+    { to: "/checklist", label: "업체 체크리스트" },
+    { to: "/authentic-review", label: "후기 구별법" },
+    { to: "/how-to-use", label: "이용 방법" },
+    { to: "/faq", label: "자주묻는질문" },
   ];
 
   return (
     <div className="min-h-screen bg-white relative">
+      {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -64,10 +65,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </a>
             </div>
 
+            {/* Mobile menu button */}
             <button
               className="md:hidden focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 rounded p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={mobileMenuOpen ? 메뉴 닫기 : 메뉴 열기}
+              aria-label={mobileMenuOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기"}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
             >
@@ -107,6 +109,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <main className="flex-grow">{children}</main>
 
+      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,7 +184,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <p className="mt-2 text-xs md:text-sm leading-relaxed max-w-4xl mx-auto">
               본 웹사이트는 소액결제, 정보이용료, 신용카드, 상품권 현금화 서비스 이용 전
               확인해야 할 비교·안전 정보를 제공하는 목적으로 운영됩니다. 서비스 이용 전 반드시
-              이용약관 및 개인정보처리방침을 확인하시기 바랍니다. 과도한 현금화 서비스 이용은
+              이용약관
               개인의 재정 상황에 부담을 줄 수 있으니 신중한 판단 후 이용해 주시기 바라며,
               불법적인 목적으로 서비스를 이용하는 것을 엄격히 금지합니다.
             </p>
@@ -189,6 +192,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </footer>
 
+      {/* 우측 하단 플로팅 버튼 */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 pointer-events-none">
         {showTooltip && (
           <div
