@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 
 const HeroSection: React.FC = () => (
-  <section className="bg-gradient-to-br from-violet-50 to-violet-100 py-12 md:py-20">
+  <section className="bg-gradient-to-br from-lime-50 to-lime-100 py-12 md:py-20">
     <div className="container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
         <div className="flex-shrink-0 lg:w-1/3">
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => (
             <br />
             <span className="text-blue-600">정보이용료현금화</span> 안전 거래
             <br />
-            <span className="text-violet-600">3분 초스피드 입금 완료</span>
+            <span className="text-lime-600">3분 초스피드 입금 완료</span>
           </h1>
 
           <div className="flex justify-center mb-6">
@@ -51,11 +51,11 @@ const HeroSection: React.FC = () => (
             <strong>급하게 현금이 필요할 때, 믿을 수 있는 곳인지부터 확인하세요.</strong>
             <br />
             소액결제·정보이용료·신용카드·상품권 현금화를 이용하기 전{" "}
-            <Link to="/fee-guide" className="text-violet-600 hover:underline font-semibold">
+            <Link to="/fee-guide" className="text-lime-600 hover:underline font-semibold">
               수수료·지급률 비교
             </Link>
             와{" "}
-            <Link to="/checklist" className="text-violet-600 hover:underline font-semibold">
+            <Link to="/checklist" className="text-lime-600 hover:underline font-semibold">
               안전한 업체 체크리스트
             </Link>
             를 먼저 확인하고,
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => (
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">✅ 정식사업자등록</div>
-            <div className="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-semibold">⚡ 3분 즉시입금</div>
+            <div className="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-semibold">⚡ 3분 즉시입금</div>
             <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">🛡️ 100% 안전거래 보장</div>
             <div className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">🕐 24시간 실시간 상담</div>
           </div>
@@ -90,7 +90,7 @@ const GuideLinksSection: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Link
           to="/fee-guide"
-          className="block bg-violet-50 hover:bg-violet-100 transition-colors rounded-2xl p-6 border border-violet-100"
+          className="block bg-lime-50 hover:bg-lime-100 transition-colors rounded-2xl p-6 border border-lime-100"
         >
           <div className="text-3xl mb-3">💰</div>
           <h3 className="text-lg font-bold text-gray-900 mb-2">수수료·지급률 비교 가이드</h3>
@@ -126,13 +126,13 @@ const GuideLinksSection: React.FC = () => (
 const StatsSection: React.FC = () => (
   <section className="py-10 bg-gray-50">
     <div className="container mx-auto px-4">
-      <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-2xl mx-auto border-2 border-violet-200">
+      <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-2xl mx-auto border-2 border-lime-200">
         <div className="text-center text-sm text-red-600 font-bold mb-4">
           🔥 소액결제현금화 실시간 거래 현황 (LIVE)
         </div>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
-            <div className="text-xl font-bold text-violet-600">3분 이내</div>
+            <div className="text-xl font-bold text-lime-600">3분 이내</div>
             <div className="text-xs text-gray-500">평균 입금 시간</div>
           </div>
           <div>
@@ -150,18 +150,18 @@ const StatsSection: React.FC = () => (
 );
 
 const CTASection: React.FC = () => (
-  <section className="py-14 md:py-20 bg-violet-600">
+  <section className="py-14 md:py-20 bg-lime-600">
     <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
         확인하셨다면, 지금 바로 상담 받아보세요
       </h2>
-      <p className="text-violet-100 mb-8 max-w-xl mx-auto">
+      <p className="text-lime-100 mb-8 max-w-xl mx-auto">
         전문 상담원이 실시간 채팅으로 지급률, 절차, 소요 시간을 바로 안내해 드립니다.
       </p>
       <a
         href="#"
         onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-        className="inline-flex items-center bg-white text-violet-700 px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+        className="inline-flex items-center bg-white text-lime-700 px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
       >
         💬 1:1 실시간 상담 시작하기
       </a>
@@ -197,3 +197,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
