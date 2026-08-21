@@ -280,7 +280,7 @@ const HowToUse: React.FC = () => {
         })}
       </script>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-violet-50 to-violet-100 py-12 md:py-20">
+      <section className="bg-gradient-to-br from-lime-50 to-lime-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
             <Breadcrumb items={[{ label: "몬스터티켓", path: "/" }, { label: "이용 방법" }]} />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -295,13 +295,13 @@ const HowToUse: React.FC = () => {
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-              className="inline-flex items-center bg-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-700 transition-colors"
+              className="inline-flex items-center bg-lime-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-lime-700 transition-colors"
             >
               📞 궁금한 점 문의하기
             </a>
             <Link
               to="/faq"
-              className="inline-flex items-center bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold border border-violet-600 hover:bg-violet-50 transition-colors"
+              className="inline-flex items-center bg-white text-lime-600 px-6 py-3 rounded-lg font-semibold border border-lime-600 hover:bg-lime-50 transition-colors"
             >
               ❓ FAQ 보기
             </Link>
@@ -350,7 +350,7 @@ const HowToUse: React.FC = () => {
                     <div className="absolute left-6 top-16 w-0.5 h-full bg-gray-200" />
                   )}
                   <div className="flex items-start space-x-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-violet-600 text-white rounded-full flex items-center justify-center text-lg font-bold">
+                    <div className="flex-shrink-0 w-12 h-12 bg-lime-600 text-white rounded-full flex items-center justify-center text-lg font-bold">
                       {step.step}
                     </div>
                     <div className="flex-grow">
@@ -370,7 +370,7 @@ const HowToUse: React.FC = () => {
                               key={detail}
                               className="flex items-center text-gray-700"
                             >
-                              <span className="w-2 h-2 bg-violet-500 rounded-full mr-3 flex-shrink-0" />
+                              <span className="w-2 h-2 bg-lime-500 rounded-full mr-3 flex-shrink-0" />
                               {detail}
                             </li>
                           ))}
@@ -422,7 +422,7 @@ const HowToUse: React.FC = () => {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-lime-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="font-bold text-gray-900 mb-2 text-center">
@@ -500,7 +500,7 @@ const HowToUse: React.FC = () => {
 
         {/* Contact CTA */}
         <section>
-          <div className="bg-gradient-to-r from-violet-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-lime-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               🎯 아직도 궁금한 점이 있으신가요?
             </h2>
@@ -512,7 +512,7 @@ const HowToUse: React.FC = () => {
               <a
                 href="#"
                 onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-                className="inline-block bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 📞 1:1 상담 받기
               </a>
@@ -537,3 +537,4 @@ const HowToUse: React.FC = () => {
 };
 
 export default HowToUse;
+
