@@ -34,7 +34,7 @@ const FeeGuide: React.FC = () => {
         keywords="소액결제현금화 수수료, 지급률 비교, 현금화 수수료 계산법"
         faqItems={faqData}
       />
-      <section className="bg-gradient-to-br from-violet-50 to-violet-100 py-12 md:py-20">
+      <section className="bg-gradient-to-br from-lime-50 to-lime-100 py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <Breadcrumb items={[{ label: "몬스터티켓", path: "/" }, { label: "수수료·지급률 비교 가이드" }]} />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -56,13 +56,13 @@ const FeeGuide: React.FC = () => {
               현금화 거래에서 <strong>지급률</strong>은 결제한 금액 대비 실제로 입금받는 현금의 비율을 말합니다.
               공식은 간단합니다.
             </p>
-            <div className="bg-violet-50 border-l-4 border-violet-500 p-5 rounded-lg my-6">
+            <div className="bg-lime-50 border-l-4 border-lime-500 p-5 rounded-lg my-6">
               <p className="text-gray-800 font-semibold">실수령액 = 결제 금액 × 지급률</p>
               <p className="text-gray-600 text-sm mt-2">예) 30만원 결제, 지급률 78% → 실수령액 234,000원</p>
             </div>
             <p className="text-gray-700 leading-relaxed">
               반대로 수수료율은 <strong>100% − 지급률</strong>로 계산합니다. 지급률 78%라면 수수료율은 22%인
-              셈입니다. 업체 광고에서 지급률만 강조하거나 수수료율만 강조하는 경우가 있으니, 상담 시 두 표현을
+          셈입니다. 업체 광고에서 지급률만 강조하거나 수수료율만 강조하는 경우가 있으니, 상담 시 두 표현을
               모두 요청해서 실제 받을 금액을 직접 계산해보는 것이 가장 정확합니다.
             </p>
           </div>
@@ -107,19 +107,19 @@ const FeeGuide: React.FC = () => {
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
             <ol className="space-y-4">
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-7 h-7 bg-violet-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                <span className="flex-shrink-0 w-7 h-7 bg-lime-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
                 <span className="text-gray-700">본인의 결제수단·금액·미납 여부를 먼저 정리한다</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-7 h-7 bg-violet-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                <span className="flex-shrink-0 w-7 h-7 bg-lime-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
                 <span className="text-gray-700">동일한 조건으로 2~3곳에 실제 견적(지급률)을 문의한다</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-7 h-7 bg-violet-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                <span className="flex-shrink-0 w-7 h-7 bg-lime-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
                 <span className="text-gray-700">안내받은 지급률을 채팅 기록이나 캡처로 남겨둔다</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-7 h-7 bg-violet-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                <span className="flex-shrink-0 w-7 h-7 bg-lime-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
                 <span className="text-gray-700">최종 입금 전 실수령액을 다시 한번 계산해 확인한다</span>
               </li>
             </ol>
@@ -143,3 +143,4 @@ const FeeGuide: React.FC = () => {
 };
 
 export default FeeGuide;
+
