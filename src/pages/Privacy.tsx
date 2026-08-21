@@ -39,25 +39,25 @@ const Privacy: React.FC = () => {
               <div className="space-y-2">
                 <a
                   href="#section1"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   1. 개인정보의 처리목적
                 </a>
                 <a
                   href="#section2"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   2. 개인정보의 처리 및 보유기간
                 </a>
                 <a
                   href="#section3"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   3. 개인정보의 제3자 제공
                 </a>
                 <a
                   href="#section4"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   4. 개인정보처리 위탁
                 </a>
@@ -65,25 +65,25 @@ const Privacy: React.FC = () => {
               <div className="space-y-2">
                 <a
                   href="#section5"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   5. 정보주체의 권리·의무
                 </a>
                 <a
                   href="#section6"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   6. 개인정보의 파기
                 </a>
                 <a
                   href="#section7"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   7. 개인정보 보호책임자
                 </a>
                 <a
                   href="#section8"
-                  className="block text-violet-600 hover:text-violet-700 transition-colors"
+                  className="block text-lime-600 hover:text-lime-700 transition-colors"
                 >
                   8. 개인정보 처리방침 변경
                 </a>
@@ -156,21 +156,21 @@ const Privacy: React.FC = () => {
             </p>
 
             <div className="space-y-6">
-              <div className="bg-violet-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-violet-800 mb-4">
+              <div className="bg-lime-50 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-lime-800 mb-4">
                   가. 현금화 서비스 제공
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-violet-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-lime-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     소액결제, 정보이용료, 신용카드, 상품권 현금화 서비스 제공
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-violet-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-lime-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     본인 확인 및 거래 인증
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-violet-600 rounded-full mr-3 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-lime-600 rounded-full mr-3 mt-2 flex-shrink-0" />
                     거래 대금 정산 및 입금 처리
                   </li>
                 </ul>
@@ -263,7 +263,7 @@ const Privacy: React.FC = () => {
                   나. 개인정보 보유기간
                 </h3>
                 <div className="space-y-4">
-                  <div className="border-l-4 border-violet-500 pl-4">
+                  <div className="border-l-4 border-lime-500 pl-4">
                     <h4 className="font-semibold text-gray-800">
                       원칙: 즉시 삭제
                     </h4>
@@ -393,11 +393,11 @@ const Privacy: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-violet-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-violet-800 mb-4">
+              <div className="bg-lime-50 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-lime-800 mb-4">
                   📞 권리 행사 방법
                 </h3>
-                <div className="space-y-3 text-violet-700">
+                <div className="space-y-3 text-lime-700">
                   <div>
                     <p className="font-semibold">1:1 상담</p>
                     <p className="text-sm">실시간 상담을 통한 즉시 처리</p>
@@ -525,11 +525,11 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-violet-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-violet-800 mb-4">
+              <div className="bg-lime-50 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-lime-800 mb-4">
                   👨‍💻 개인정보보호담당자
                 </h3>
-                <div className="space-y-2 text-violet-700">
+                <div className="space-y-2 text-lime-700">
                   <div className="flex">
                     <span className="w-16 font-semibold">성명:</span>
                     <span>박보호</span>
@@ -637,7 +637,7 @@ const Privacy: React.FC = () => {
           </section>
 
           {/* 문의 및 상담 */}
-          <div className="bg-gradient-to-r from-violet-600 to-violet-700 rounded-2xl p-8 md:p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-lime-600 to-lime-700 rounded-2xl p-8 md:p-12 text-white text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               👹 개인정보 관련 문의가 있으신가요?
             </h2>
@@ -656,7 +656,7 @@ const Privacy: React.FC = () => {
               </a>
               <Link
                 to="/checklist"
-                className="inline-block bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 🛡️ 안전 체크리스트 보기
               </Link>
@@ -669,3 +669,4 @@ const Privacy: React.FC = () => {
 };
 
 export default Privacy;
+
