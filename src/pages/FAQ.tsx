@@ -60,7 +60,7 @@ const FAQ: React.FC = () => {
         {
           question: "소액결제현금화 이용방법이 어떻게 되나요?",
           answer:
-            "매우 간단한 4단계로 진행됩니다. <strong>1) 몬스터티켓 1:1 상담 신청 → 2) 본인 확인 및 한도 조회 → 3) 상담원의 안내에 따른 안전 결제 진행 → 4) 결제 확인 후 3분 내 즉시 입금.</strong> <a href='/how-to-use' class='text-violet-600 hover:underline'>이용 방법 페이지</a>에서 더 자세한 내용을 확인하실 수 있습니다.",
+            "매우 간단한 4단계로 진행됩니다. <strong>1) 몬스터티켓 1:1 상담 신청 → 2) 본인 확인 및 한도 조회 → 3) 상담원의 안내에 따른 안전 결제 진행 → 4) 결제 확인 후 3분 내 즉시 입금.</strong> <a href='/how-to-use' class='text-lime-600 hover:underline'>이용 방법 페이지</a>에서 더 자세한 내용을 확인하실 수 있습니다.",
         },
         {
           question: "미납이나 정책 제한이 있어도 소액결제현금화가 가능한가요?",
@@ -170,7 +170,7 @@ const FAQ: React.FC = () => {
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               소액결제현금화 몬스터티켓{" "}
-              <span className="text-violet-600">자주묻는질문</span>
+              <span className="text-lime-600">자주묻는질문</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
               소액결제현금화, 정보이용료현금화, 신용카드현금화, 상품권현금화에
@@ -185,7 +185,7 @@ const FAQ: React.FC = () => {
                 key={category.category}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden"
               >
-                <div className="bg-gradient-to-r from-violet-600 to-blue-600 text-white p-6">
+                <div className="bg-gradient-to-r from-lime-600 to-blue-600 text-white p-6">
                   <h2 className="text-xl md:text-2xl font-bold">
                     {category.category}
                   </h2>
@@ -205,7 +205,7 @@ const FAQ: React.FC = () => {
                         >
                           <div className="flex justify-between items-start">
                             <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                              <span className="text-violet-600 font-bold">Q.</span> {faq.question}
+                              <span className="text-lime-600 font-bold">Q.</span> {faq.question}
                             </h3>
                             <div
                               className={`flex-shrink-0 transform transition-transform duration-200 ${
@@ -213,7 +213,7 @@ const FAQ: React.FC = () => {
                               }`}
                             >
                               <svg
-                                className="w-6 h-6 text-violet-600"
+                                className="w-6 h-6 text-lime-600"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -231,8 +231,8 @@ const FAQ: React.FC = () => {
 
                         {isOpen && (
                           <div className="mt-4 text-gray-700 leading-relaxed">
-                            <div className="bg-violet-50 p-4 rounded-lg border-l-4 border-violet-600 flex">
-                              <span className="font-bold text-violet-800 mr-2">A.</span>
+                            <div className="bg-lime-50 p-4 rounded-lg border-l-4 border-lime-600 flex">
+                              <span className="font-bold text-lime-800 mr-2">A.</span>
                               <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                             </div>
                           </div>
@@ -245,7 +245,7 @@ const FAQ: React.FC = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-violet-600 to-blue-600 rounded-2xl p-8 text-center text-white mt-12">
+          <div className="bg-gradient-to-r from-lime-600 to-blue-600 rounded-2xl p-8 text-center text-white mt-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               더 궁금한 점이 있으신가요?
             </h2>
@@ -256,7 +256,7 @@ const FAQ: React.FC = () => {
               <a
                 href="#"
                 onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-                className="inline-flex items-center bg-white text-violet-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center bg-white text-lime-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
               >
                 💬 실시간 상담하기
               </a>
@@ -276,3 +276,4 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
+
