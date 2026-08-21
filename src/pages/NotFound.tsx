@@ -20,7 +20,7 @@ const NotFound: React.FC = () => {
         </p>
         <Link
           to="/"
-          className="inline-block bg-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-700 transition-colors"
+          className="inline-block bg-lime-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-lime-700 transition-colors"
         >
           홈으로 돌아가기
         </Link>
