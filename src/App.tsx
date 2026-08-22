@@ -21,6 +21,7 @@ function App() {
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/ko" element={<Home />} />
             <Route path="/fee-guide" element={<FeeGuide />} />
             <Route path="/checklist" element={<Checklist />} />
             <Route path="/authentic-review" element={<AuthenticReview />} />
