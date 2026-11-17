@@ -22,16 +22,16 @@ const HeroSection: React.FC = () => (
         <div className="flex-1 text-center">
           <div className="mb-4">
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-bold mb-2">
-              🔥 소액결제현금화 3분 즉시입금! 몬스터티켓
+              🔥 소액결제현금화 빠른 입금 안내! 몬스터티켓
             </div>
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="sr-only">몬스터티켓</span>
-            <span className="text-red-600">소액결제현금화 미납·정책 99.9% 승인!</span>
+            <span className="text-red-600">소액결제현금화 미납·정책 상담!</span>
             <br />
             <span className="text-blue-600">정보이용료현금화</span> 안전 거래
             <br />
-            <span className="text-lime-600">3분 초스피드 입금 완료</span>
+            <span className="text-lime-600">빠른 입금 안내</span>
           </h1>
 
           <div className="flex justify-center mb-6">
@@ -64,9 +64,9 @@ const HeroSection: React.FC = () => (
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">✅ 정식사업자등록</div>
-            <div className="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-semibold">⚡ 3분 즉시입금</div>
-            <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">🛡️ 100% 안전거래 보장</div>
+            <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">✅ 상담 후 절차 안내</div>
+            <div className="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm font-semibold">⚡ 빠른 입금 안내</div>
+            <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">🛡️ 안전거래 안내</div>
             <div className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">🕐 24시간 실시간 상담</div>
           </div>
         </div>
@@ -136,7 +136,7 @@ const StatsSection: React.FC = () => (
             <div className="text-xs text-gray-500">평균 입금 시간</div>
           </div>
           <div>
-            <div className="text-xl font-bold text-blue-600">99.9%</div>
+            <div className="text-xl font-bold text-blue-600">상담</div>
             <div className="text-xs text-gray-500">미납·정책 승인률</div>
           </div>
           <div>
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
     <>
       <SEO
         title="소액결제현금화 수수료 비교 및 안전 업체 체크리스트"
-        description="소액결제·정보이용료·신용카드·상품권 현금화 이용 전 수수료 비교, 안전한 업체 선택 체크리스트, 후기 구별법을 확인하세요. 몬스터티켓에서 3분 즉시입금 상담도 가능합니다."
+        description="소액결제·정보이용료·신용카드·상품권 현금화 이용 전 수수료 비교, 안전한 업체 선택 체크리스트, 후기 구별법을 확인하세요. 몬스터티켓에서 빠른 입금 안내 상담도 가능합니다."
         faqItems={[
           {
             question: "몬스터티켓은 어떤 서비스인가요?",
