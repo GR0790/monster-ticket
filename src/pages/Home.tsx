@@ -132,7 +132,7 @@ const StatsSection: React.FC = () => (
         </div>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
-            <div className="text-xl font-bold text-lime-600">3분 이내</div>
+            <div className="text-xl font-bold text-lime-600">24시간</div>
             <div className="text-xs text-gray-500">평균 입금 시간</div>
           </div>
           <div>
