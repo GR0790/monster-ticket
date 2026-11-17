@@ -14,15 +14,16 @@ const BRAND = '몬스터티켓';
 
 const ROUTE_META = {
   "/": {
-    "title": "상품권 매입·모바일 상품권 구매 절차 안내 | 몬스터티켓",
-    "description": "상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지. 수수료 비교 가이드와 안전 체크리스트로 확인할 것을 먼저 정리하고 24시간 채널톡 1:1 상담으로 조건을 안내합니다.",
+    "title": "몬스터티켓 | 휴대폰 소액결제·정보이용료 구조와 수수료 계산",
+    "description": "결제한 금액에서 실제로 돌려받는 금액이 어떻게 정해지는지, 지급률과 수수료율 계산식으로 먼저 확인합니다. 거래 전 점검할 6가지와 후기 판별 기준도 함께 정리했습니다. 조건은 상담에서 확인한 숫자로 안내합니다.",
+    "heading": "몬스터티켓 — 소액결제·정보이용료 구조와 수수료 계산",
     "crumbs": [
       ["몬스터티켓", "/"]
     ]
   },
   "/ko": {
-    "title": "상품권 매입·모바일 상품권 구매 절차 안내 | 몬스터티켓",
-    "description": "상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지. 수수료 비교 가이드와 안전 체크리스트로 확인할 것을 먼저 정리합니다.",
+    "title": "몬스터티켓 | 휴대폰 소액결제·정보이용료 구조와 수수료 계산",
+    "description": "지급률과 수수료율 계산식, 거래 전 점검 6가지, 후기 판별 기준을 한 페이지에 정리했습니다. 조건은 상담에서 확인한 숫자로 안내합니다.",
     // 홈과 같은 내용의 보조 주소이므로 canonical은 홈으로 모읍니다.
     "canonical": "/",
     "crumbs": [
@@ -54,16 +55,16 @@ const ROUTE_META = {
     ]
   },
   "/how-to-use": {
-    "title": "이용 방법 — 네 단계 안내 | 몬스터티켓",
-    "description": "상담 정보 입력부터 내용 확인, 조건 안내, 동의 후 진행까지 네 단계로 정리했습니다. 처음 이용하시는 분도 쉽게 따라할 수 있는 절차와 주의사항을 안내합니다.",
+    "title": "이용 방법 — 접수부터 숫자 확인까지 | 몬스터티켓",
+    "description": "접수, 결제수단 확인, 지급률·수수료 계산, 숫자 확인 후 진행까지 네 단계입니다. 각 단계에서 무엇을 확인하고 어떤 숫자를 맞추는지 정리했습니다.",
     "crumbs": [
       ["몬스터티켓", "/"],
       ["이용 방법", "/how-to-use/"]
     ]
   },
   "/faq": {
-    "title": "자주묻는질문 | 몬스터티켓",
-    "description": "상품권 매입과 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매에 대한 자주 묻는 질문을 정리했습니다.",
+    "title": "자주 묻는 질문 | 몬스터티켓",
+    "description": "지급률과 수수료 계산, 참고 구간과 확정 금액의 차이, 상담 준비물, 개인정보 처리까지. 숫자와 조건에 관한 질문을 모았습니다.",
     "crumbs": [
       ["몬스터티켓", "/"],
       ["자주묻는질문", "/faq/"]
@@ -178,11 +179,11 @@ function noscriptBlock(route, heading, description) {
       <div style="max-width: 720px; margin: 56px auto; padding: 0 24px; font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; color: #0b1117; line-height: 1.75">
         <h1 style="font-size: 24px; font-weight: 700; margin: 0 0 12px">${esc(heading)}</h1>
         <p style="margin: 0 0 18px; color: #45525f">${esc(description)}</p>
-        <p style="margin: 0 0 6px; font-size: 13px; font-weight: 600; color: #334155">바로가기</p>
+        <p style="margin: 0 0 6px; font-size: 13px; font-weight: 600; color: #334155">정리해 둔 안내</p>
         <ul style="margin: 0; padding-left: 18px; font-size: 14px">
 ${links}
         </ul>
-        <p style="margin: 18px 0 0; font-size: 13px; color: #64748b">${esc(BRAND)} · 채널톡 1:1 상담 24시간 접수 · 전화 010-2138-0790</p>
+        <p style="margin: 18px 0 0; font-size: 13px; color: #64748b">${esc(BRAND)} · 숫자로 확인하는 조건 · 채널톡 1:1 상담 24시간 · 전화 010-2138-0790</p>
       </div>
     </noscript>
     <!--seo-noscript-end-->`;
@@ -193,7 +194,7 @@ function inject(html, route, m) {
   const desc = esc(m.description);
   const url = pageUrl(route);
   const canonicalUrl = pageUrl(m.canonical || route);
-  const heading = m.crumbs[m.crumbs.length - 1][0];
+  const heading = m.heading ?? m.crumbs[m.crumbs.length - 1][0];
   let out = html;
 
   out = out.replace(/<title>[\s\S]*?<\/title>/, '<title>' + title + '</title>');

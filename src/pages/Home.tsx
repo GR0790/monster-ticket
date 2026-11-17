@@ -53,9 +53,9 @@ const Hero: React.FC = () => (
             </span>
           </h1>
           <p className="mt-7 max-w-xl text-[15.5px] leading-[1.95] text-ink-soft">
-            상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지.
+            결제 금액과 실제 수령액 사이에는 지급률과 수수료가 있습니다.
             <br className="hidden sm:block" />
-            확인할 것을 먼저 정리하고, 가능한 범위와 조건을 안내한 뒤 진행합니다.
+            같은 조건도 어느 숫자를 먼저 말하는지에 따라 다르게 보입니다. 계산식을 먼저 보이고, 확인된 숫자로만 안내합니다.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -118,12 +118,12 @@ const ServicesSection: React.FC = () => (
           eyebrow="What we guide"
           title={
             <>
-              네 가지 이용 안내.
+              어떤 결제든
               <br />
-              필요한 하나부터 확인합니다.
+              구조는 네 갈래입니다.
             </>
           }
-          lead="상품권 매입과 모바일 상품권 구매, 카드 결제, 정보이용료 게임재화. 방법마다 확인할 항목이 다릅니다."
+          lead="휴대폰 결제, 카드 결제, 정보이용료, 상품권 매입. 갈래마다 돈이 오가는 구조가 달라서, 먼저 확인할 숫자도 다릅니다."
         />
         <ArrowLink to="/how-to-use" className="shrink-0">
           전체 이용 방법 보기
@@ -310,12 +310,12 @@ const ProcessSection: React.FC = () => (
         eyebrow="How it works"
         title={
           <>
-            복잡한 절차는 없습니다.
+            진행은 네 단계,
             <br />
-            네 단계면 충분합니다.
+            숫자 확인이 먼저입니다.
           </>
         }
-        lead="상담 접수에서 끝나지 않고, 조건 안내와 진행 확인까지 이어집니다."
+        lead="접수하자마자 조건을 말하지 않습니다. 결제수단을 확인하고 계산식을 맞춰 본 뒤 숫자로 안내합니다."
       />
 
       <ol className="mt-12 grid gap-px border border-line bg-line md:grid-cols-4">
@@ -351,7 +351,7 @@ const MomentsSection: React.FC = () => (
       <SectionHead
         eyebrow="For these moments"
         title="이런 때 함께합니다."
-        lead="정해진 상품만 안내하는 곳이 아니라, 상황에 맞는 방법을 찾는 곳입니다."
+        lead="상품권이 남았는지, 한도가 얼마인지, 할부가 나은지. 판단이 서지 않을 때 숫자부터 같이 맞춰 봅니다."
       />
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
         {moments.map((m) => (
@@ -386,8 +386,10 @@ const FaqSection: React.FC = () => (
 const Home: React.FC = () => (
   <>
     <SEO
-      title="상품권 매입·모바일 상품권 구매 절차 안내"
-      description="상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지. 수수료 비교 가이드와 안전 체크리스트로 확인할 것을 먼저 정리하고 채널톡 1:1 상담으로 조건을 안내합니다."
+      title="휴대폰 소액결제·정보이용료 구조와 수수료 계산"
+      description="결제한 금액에서 실제로 돌려받는 금액이 어떻게 정해지는지, 지급률과 수수료율 계산식으로 먼저 확인합니다. 거래 전 점검할 6가지와 후기 판별 기준도 함께 정리했습니다. 조건은 상담에서 확인한 숫자로 안내합니다."
+      ogDescription="지급률·수수료율 계산법과 거래 전 점검 6가지로 조건을 먼저 확인합니다. 상담에서 확인한 숫자로만 조건을 안내합니다."
+      keywords="휴대폰 소액결제 구조,정보이용료 게임재화,지급률 계산,수수료율 비교,상품권 매입,안전 체크리스트"
       faqItems={homeFaq.map((f) => ({ question: f.q, answer: f.a }))}
     />
     <Hero />
@@ -406,7 +408,7 @@ const Home: React.FC = () => (
           상담으로 이어가세요.
         </>
       }
-      body="성함과 연락처만 남기면 채널톡 1:1 상담창이 열립니다. 상품권 종류나 결제 방법을 알려주시면 가능 범위와 조건을 안내드립니다."
+      body="결제수단과 금액만 알려주시면 계산에 필요한 숫자를 함께 맞춰 봅니다. 조건은 확인한 뒤 안내합니다."
     />
   </>
 );

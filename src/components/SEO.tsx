@@ -9,13 +9,14 @@ interface FAQItem {
 interface SEOProps {
   title: string;
   description: string;
+  ogDescription?: string;
   keywords?: string;
   faqItems?: FAQItem[];
   noindex?: boolean;
 }
 
 const defaultKeywords =
-  "몬스터티켓,상품권 매입,모바일 상품권 매입,휴대폰 소액결제 상품권 구매,신용카드 상품권 구매,정보이용료 게임재화 구매,상품권 지급률,수수료 비교,안전 체크리스트";
+  "몬스터티켓,휴대폰 소액결제 구조,정보이용료 게임재화,지급률 계산,수수료율 비교,안전 체크리스트";
 
 const siteUrl = "https://xn--z52bu9l3wk26b91c.com";
 
@@ -23,7 +24,7 @@ const siteUrl = "https://xn--z52bu9l3wk26b91c.com";
  * 페이지별 메타데이터 + 구조화 데이터.
  * (사업자·평점 등 확인되지 않은 정보는 넣지 않습니다.)
  */
-const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, noindex = false }) => {
+const SEO: React.FC<SEOProps> = ({ title, description, ogDescription, keywords, faqItems, noindex = false }) => {
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
   const canonicalUrl = typeof window !== "undefined" ? `${siteUrl}${window.location.pathname}` : `${siteUrl}/`;
   const fullTitle = `${title} | 몬스터티켓`;
@@ -35,7 +36,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, noind
     url: siteUrl,
     inLanguage: "ko-KR",
     description:
-      "상품권 매입과 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매 절차를 안내하는 사이트입니다.",
+      "휴대폰 소액결제와 정보이용료의 결제 구조, 지급률·수수료 계산법, 거래 전 안전 점검 항목을 정리해 안내하는 사이트입니다.",
     publisher: {
       "@type": "Organization",
       name: "몬스터티켓",
@@ -78,7 +79,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, noind
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="ko_KR" />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={ogDescription ?? description} />
       <meta property="og:site_name" content="몬스터티켓" />
       <meta property="og:image" content={`${siteUrl}/monster-mascot.webp`} />
       <meta property="og:image:width" content="1000" />
@@ -88,7 +89,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, faqItems, noind
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:description" content={ogDescription ?? description} />
       <meta name="twitter:image" content={`${siteUrl}/monster-mascot.webp`} />
       <meta name="twitter:image:alt" content={fullTitle} />
 
