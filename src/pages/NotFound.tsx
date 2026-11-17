@@ -1,32 +1,37 @@
 import type React from "react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { ConsultButton } from "../components/ui";
 
-const NotFound: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <SEO
-        noindex
-        title="페이지를 찾을 수 없습니다"
-        description="요청하신 페이지를 찾을 수 없습니다. 몬스터티켓 홈에서 원하시는 정보를 확인하세요."
-      />
-      <div className="text-center">
-        <div className="text-7xl mb-4">👹</div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-3">
-          404 - 페이지를 찾을 수 없습니다
+const NotFound: React.FC = () => (
+  <>
+    <SEO
+      noindex
+      title="페이지를 찾을 수 없습니다"
+      description="요청하신 페이지를 찾을 수 없습니다. 몬스터티켓 홈에서 상품권 매입과 결제 구매 안내를 확인하세요."
+    />
+    <section className="relative overflow-hidden bg-night text-white">
+      <div aria-hidden="true" className="grid-bg-dark pointer-events-none absolute inset-0 opacity-70" />
+      <div className="wrap relative flex min-h-[68vh] flex-col justify-center py-20">
+        <p className="eyebrow-light mb-5">Error 404</p>
+        <h1 className="display-hero">
+          페이지를
+          <br />
+          찾을 수 없습니다.
         </h1>
-        <p className="text-gray-600 mb-8">
-          요청하신 주소가 변경되었거나 존재하지 않습니다.
+        <p className="mt-6 max-w-xl text-[15px] leading-[1.9] text-white/60">
+          요청하신 주소가 변경되었거나 존재하지 않습니다. 홈에서 수수료 비교 가이드와 안전 체크리스트를 확인하시거나,
+          상담으로 바로 문의하세요.
         </p>
-        <Link
-          to="/"
-          className="inline-block bg-lime-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-lime-700 transition-colors"
-        >
-          홈으로 돌아가기
-        </Link>
+        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <Link to="/" className="btn-light min-h-[54px] px-7 text-[15px]">
+            홈으로 돌아가기
+          </Link>
+          <ConsultButton variant="ghostLight" size="lg" label="채널톡 1:1 상담" />
+        </div>
       </div>
-    </div>
-  );
-};
+    </section>
+  </>
+);
 
 export default NotFound;

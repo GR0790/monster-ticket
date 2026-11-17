@@ -1,42 +1,11 @@
 {
-  "name": "몬스터티켓 - 현금화 전문업체",
+  "name": "몬스터티켓 - 상품권 매입·구매 안내",
   "short_name": "몬스터티켓",
-  "description": "소액결제, 정보이용료, 신용카드, 상품권 현금화 전문업체",
+  "description": "상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매 절차 안내",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#65a30d",
-  "icons": [
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon.ico",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
-{
-  "name": "몬스터티켓 - 현금화 전문업체",
-  "short_name": "몬스터티켓",
-  "description": "소액결제, 정보이용료, 신용카드, 상품권 현금화 전문업체",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#7c3aed",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0B1117",
   "icons": [
     {
       "src": "/favicon-16x16.png",

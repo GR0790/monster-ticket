@@ -1,605 +1,217 @@
 import type React from "react";
-import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import { LegalList, LegalSection, LegalShell } from "../components/Legal";
+import { site } from "../data/site";
 
-const Privacy: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <SEO
-        title="개인정보처리방침"
-        description="몬스터티켓 개인정보처리방침. 고객님의 개인정보 수집·이용·보관·파기에 관한 안내입니다."
-        keywords="몬스터티켓 개인정보처리방침, 개인정보 보호정책"
-      />
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-100 to-gray-200 py-12 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            개인정보처리방침
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            몬스터티켓은 고객님의 개인정보를 소중히 여기며,
-            <br />
-            개인정보보호법을 준수하여 안전하게 처리하고 있습니다.
-          </p>
-          <div className="bg-white rounded-lg p-4 inline-block">
-            <p className="text-sm text-gray-600">
-              <strong>시행일자:</strong> 2024년 12월 1일 |
-              <strong className="ml-2">최종 수정일:</strong> 2024년 12월 15일
+const sections = [
+  { id: "p1", title: "1. 개인정보의 처리 목적" },
+  { id: "p2", title: "2. 처리 항목 및 보유기간" },
+  { id: "p3", title: "3. 개인정보의 제3자 제공" },
+  { id: "p4", title: "4. 개인정보 처리의 위탁" },
+  { id: "p5", title: "5. 정보주체의 권리·의무" },
+  { id: "p6", title: "6. 개인정보의 파기" },
+  { id: "p7", title: "7. 안전성 확보조치" },
+  { id: "p8", title: "8. 쿠키의 운영 및 거부" },
+  { id: "p9", title: "9. 개인정보 보호책임자" },
+  { id: "p10", title: "10. 고충처리 및 구제방법" },
+  { id: "p11", title: "11. 처리방침의 변경" },
+];
+
+const Privacy: React.FC = () => (
+  <>
+    <SEO
+      title="개인정보처리방침"
+      description="몬스터티켓 개인정보처리방침. 상담 시 수집하는 개인정보의 항목과 목적, 보유기간, 파기 방법, 정보주체의 권리를 안내합니다."
+      keywords="몬스터티켓 개인정보처리방침, 개인정보 수집, 상담 정보"
+    />
+    <LegalShell
+      eyebrow="Privacy policy"
+      title="개인정보처리방침"
+      lead="몬스터티켓은 상담에 필요한 최소한의 정보만 수집하고, 수집한 목적 범위 안에서만 이용합니다."
+      effective="2024. 12. 01"
+      updated="2026. 11. 17"
+      sections={sections}
+    >
+      <p className="border border-line bg-frost p-5 text-[13px] leading-[1.9] text-ink-soft">
+        몬스터티켓(이하 "회사")은 「개인정보 보호법」 등 관련 법령에 따라 이용자의 개인정보를 보호하고, 이와 관련한
+        고충을 신속하게 처리할 수 있도록 다음과 같이 개인정보처리방침을 수립·공개합니다.
+      </p>
+
+      <LegalSection id="p1" title="1. 개인정보의 처리 목적">
+        <p>회사는 다음 목적을 위해 개인정보를 처리하며, 다음 목적 이외의 용도로는 이용하지 않습니다.</p>
+        <LegalList
+          items={[
+            <><strong className="font-semibold text-ink">상담 응대</strong> — 상품권 매입·구매 가능 여부 확인, 조건 안내, 진행 상황 안내</>,
+            <><strong className="font-semibold text-ink">고객 식별</strong> — 채널톡 상담에서 동일 고객의 이전 상담 내용 확인</>,
+            <><strong className="font-semibold text-ink">문의·불만 처리</strong> — 접수된 문의의 처리와 결과 안내</>,
+            <><strong className="font-semibold text-ink">부정이용 방지</strong> — 타인 명의 이용 등 비정상적인 이용의 확인</>,
+            <><strong className="font-semibold text-ink">서비스 개선</strong> — 방문 기록을 활용한 이용 현황 분석(개인을 식별하지 않는 형태)</>,
+          ]}
+        />
+      </LegalSection>
+
+      <LegalSection id="p2" title="2. 처리 항목 및 보유기간">
+        <div className="divide-y divide-line border-y border-line">
+          <div className="grid gap-1 py-4 sm:grid-cols-[150px_1fr] sm:gap-6">
+            <p className="text-[12.5px] font-semibold text-ink">필수 항목</p>
+            <p>성함, 휴대폰 번호 (상담 시작 시 1회 입력)</p>
+          </div>
+          <div className="grid gap-1 py-4 sm:grid-cols-[150px_1fr] sm:gap-6">
+            <p className="text-[12.5px] font-semibold text-ink">자동 수집 항목</p>
+            <p>접속 IP, 브라우저·기기 정보, 방문 일시, 접속 기록, 쿠키</p>
+          </div>
+          <div className="grid gap-1 py-4 sm:grid-cols-[150px_1fr] sm:gap-6">
+            <p className="text-[12.5px] font-semibold text-ink">보유기간</p>
+            <p>
+              상담 종료 후 1년, 또는 이용자가 삭제를 요청한 때까지. 관계 법령에서 보존을 요구하는 경우 해당 기간 동안
+              보관합니다.
             </p>
           </div>
         </div>
-      </section>
+        <p>
+          회사는 주민등록번호, 비밀번호, 인증번호 전체 등 상담에 필요하지 않은 정보는 수집하지 않습니다. 상담 정보는
+          이용자의 브라우저에 저장되어 다음 상담 시 자동으로 연결되며, 브라우저 저장 데이터를 삭제하면 함께
+          삭제됩니다.
+        </p>
+      </LegalSection>
 
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto">
-          {/* 목차 */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">📋 목차</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <a
-                  href="#section1"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  1. 개인정보의 처리목적
-                </a>
-                <a
-                  href="#section2"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  2. 개인정보의 처리 및 보유기간
-                </a>
-                <a
-                  href="#section3"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  3. 개인정보의 제3자 제공
-                </a>
-                <a
-                  href="#section4"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  4. 개인정보처리 위탁
-                </a>
-              </div>
-              <div className="space-y-2">
-                <a
-                  href="#section5"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  5. 정보주체의 권리·의무
-                </a>
-                <a
-                  href="#section6"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  6. 개인정보의 파기
-                </a>
-                <a
-                  href="#section7"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  7. 개인정보 보호책임자
-                </a>
-                <a
-                  href="#section8"
-                  className="block text-lime-600 hover:text-lime-700 transition-colors"
-                >
-                  8. 개인정보 처리방침 변경
-                </a>
-              </div>
-            </div>
-          </div>
+      <LegalSection id="p3" title="3. 개인정보의 제3자 제공">
+        <p>
+          회사는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만 다음의 경우에는 관련 법령에 따라 제공할 수
+          있습니다.
+        </p>
+        <LegalList
+          items={[
+            "이용자가 사전에 동의한 경우",
+            "법령의 규정에 의하거나 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관이 요구하는 경우",
+          ]}
+        />
+      </LegalSection>
 
-          {/* 상담 안내 */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              ☎️ 상담 안내
-            </h2>
-            <div className="text-gray-700 space-y-2">
-              <p>
-                개인정보 처리와 관련한 문의는 고객센터(010-2138-0790) 또는 사이트
-                내 1:1 상담(채널톡)으로 접수해 주시면 확인 후 안내드립니다.
-              </p>
-            </div>
-          </div>
-
-          {/* 1. 개인정보의 처리목적 */}
-          <section
-            id="section1"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              1. 개인정보의 처리목적
-            </h2>
-            <p className="text-gray-700 mb-6">
-              몬스터티켓은 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의
-              목적 이외의 용도로는 이용하지 않습니다.
-            </p>
-
-            <div className="space-y-6">
-              <div className="bg-lime-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-lime-800 mb-4">
-                  가. 현금화 서비스 제공
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-lime-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    소액결제, 정보이용료, 신용카드, 상품권 현금화 서비스 제공
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-lime-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    본인 확인 및 거래 인증
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-lime-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    거래 대금 정산 및 입금 처리
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-blue-800 mb-4">
-                  나. 고객 상담 및 불만 처리
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    고객 문의사항 접수 및 처리
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    불만사항 처리 및 분쟁 조정
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    공지사항 전달 및 서비스 안내
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-purple-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-purple-800 mb-4">
-                  다. 부정이용 방지 및 법적 의무 이행
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    부정거래 탐지 및 방지
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    금융실명법, 정보통신망법 등 관련 법령 준수
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    수사기관 요청 시 법적 의무 이행
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* 2. 개인정보의 처리 및 보유기간 */}
-          <section
-            id="section2"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              2. 개인정보의 처리 및 보유기간
-            </h2>
-
-            <div className="space-y-6">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">
-                  가. 수집하는 개인정보 항목
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-3">
-                      필수 정보
-                    </h4>
-                    <ul className="space-y-1 text-gray-700 text-sm">
-                      <li>• 성명, 생년월일</li>
-                      <li>• 휴대폰 번호</li>
-                      <li>• 입금 계좌번호</li>
-                      <li>• 거래 관련 정보</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-3">
-                      자동 수집 정보
-                    </h4>
-                    <ul className="space-y-1 text-gray-700 text-sm">
-                      <li>• IP 주소, 쿠키</li>
-                      <li>• 접속 일시 및 서비스 이용 기록</li>
-                      <li>• 디바이스 정보</li>
-                      <li>• 접속 브라우저 정보</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">
-                  나. 개인정보 보유기간
-                </h3>
-                <div className="space-y-4">
-                  <div className="border-l-4 border-lime-500 pl-4">
-                    <h4 className="font-semibold text-gray-800">
-                      원칙: 즉시 삭제
-                    </h4>
-                    <p className="text-gray-700 text-sm">
-                      거래 완료 즉시 또는 서비스 이용 종료 즉시 파기합니다.
-                    </p>
-                  </div>
-                  <div className="border-l-4 border-blue-500 pl-4">
-                    <h4 className="font-semibold text-gray-800">
-                      법령에 따른 보존
-                    </h4>
-                    <ul className="text-gray-700 text-sm space-y-1">
-                      <li>• 전자상거래법: 거래기록 5년</li>
-                      <li>• 통신비밀보호법: 로그 기록 3개월</li>
-                      <li>• 개인정보보호법: 개인정보 처리현황 3년</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 3. 개인정보의 제3자 제공 */}
-          <section
-            id="section3"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              3. 개인정보의 제3자 제공
-            </h2>
-
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
-              <h3 className="text-lg font-bold text-red-800 mb-3">
-                ❌ 원칙: 제3자 제공 금지
-              </h3>
-              <p className="text-red-700">
-                몬스터티켓은 정보주체의 개인정보를{" "}
-                <strong>제3자에게 제공하지 않습니다.</strong>
-              </p>
-            </div>
-
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-              <h3 className="text-lg font-bold text-yellow-800 mb-3">
-                ⚠️ 예외사항
-              </h3>
-              <p className="text-yellow-700 mb-4">
-                다음의 경우에만 예외적으로 제공할 수 있습니다:
-              </p>
-              <ul className="space-y-2 text-yellow-700">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-yellow-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                  정보주체로부터 별도의 동의를 받은 경우
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-yellow-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                  법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위해
-                  불가피한 경우
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-yellow-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                  수사기관이 수사목적으로 법령에 정해진 절차와 방법에 따라
-                  요청한 경우
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* 4. 개인정보처리 위탁 */}
-          <section
-            id="section4"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              4. 개인정보처리 위탁
-            </h2>
-
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">
-                현재 상황
-              </h3>
-              <p className="text-gray-700 mb-4">
-                몬스터티켓은 현재 개인정보 처리업무를 외부에 위탁하고 있지
-                않습니다.
-              </p>
-              <p className="text-gray-700">
-                향후 위탁이 필요한 경우, 위탁업체와 위탁업무 내용을 사전에
-                공지하고 필요한 경우 정보주체의 동의를 받겠습니다.
-              </p>
-            </div>
-          </section>
-
-          {/* 5. 정보주체의 권리·의무 */}
-          <section
-            id="section5"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              5. 정보주체의 권리·의무
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-blue-800 mb-4">
-                  🔍 정보주체의 권리
-                </h3>
-                <ul className="space-y-2 text-blue-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    개인정보 처리현황 통지 요구권
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    개인정보 열람 요구권
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    개인정보 정정·삭제 요구권
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    개인정보 처리정지 요구권
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0" />
-                    손해배상 청구권
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-lime-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-lime-800 mb-4">
-                  📞 권리 행사 방법
-                </h3>
-                <div className="space-y-3 text-lime-700">
-                  <div>
-                    <p className="font-semibold">1:1 상담</p>
-                    <p className="text-sm">실시간 상담을 통한 즉시 처리</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold">처리기간</p>
-                    <p className="text-sm">접수 후 지체없이 처리 (10일 이내)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-              <h3 className="text-lg font-bold text-yellow-800 mb-3">
-                ⚖️ 권리 행사의 제한
-              </h3>
-              <p className="text-yellow-700 mb-3">
-                다음의 경우 권리 행사가 제한될 수 있습니다:
-              </p>
-              <ul className="space-y-1 text-yellow-700 text-sm">
-                <li>• 법령에서 열람을 제한하거나 금지하는 경우</li>
-                <li>• 다른 사람의 생명·신체를 해할 우려가 있는 경우</li>
-                <li>
-                  • 다른 사람의 개인정보 또는 재산에 피해를 줄 우려가 있는 경우
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* 6. 개인정보의 파기 */}
-          <section
-            id="section6"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              6. 개인정보의 파기
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-red-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-red-800 mb-4">
-                  🗑️ 파기절차
-                </h3>
-                <ol className="space-y-2 text-red-700">
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      1
-                    </span>
-                    <span>파기 사유 발생 즉시 파기계획 수립</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      2
-                    </span>
-                    <span>개인정보보호책임자 승인</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      3
-                    </span>
-                    <span>안전하고 완전한 파기 실행</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      4
-                    </span>
-                    <span>파기 결과 기록 및 보관</span>
-                  </li>
-                </ol>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">
-                  💻 파기방법
-                </h3>
-                <div className="space-y-3 text-gray-700">
-                  <div>
-                    <h4 className="font-semibold">전자파일</h4>
-                    <p className="text-sm">
-                      복구가 불가능하도록 안전한 방법으로 삭제
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">종이문서</h4>
-                    <p className="text-sm">분쇄기로 분쇄하거나 소각하여 파기</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">저장매체</h4>
-                    <p className="text-sm">
-                      물리적 파괴 또는 전문 삭제 프로그램 이용
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 7. 개인정보 보호책임자 */}
-          <section
-            id="section7"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              7. 개인정보 보호책임자
-            </h2>
-
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="text-lg font-bold text-blue-800 mb-4">
-                💬 개인정보 관련 문의
-              </h3>
-              <div className="space-y-2 text-blue-700">
-                <p>
-                  개인정보 열람·정정·삭제 요청은 고객센터(010-2138-0790) 또는
-                  사이트 내 1:1 상담(채널톡)으로 접수해 주시면 확인 후
-                  안내드립니다.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-              <h3 className="text-lg font-bold text-yellow-800 mb-3">
-                📞 개인정보 침해신고센터
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-yellow-700 text-sm">
-                <div>
-                  <p className="font-semibold">개인정보보호위원회</p>
-                  <p>privacy.go.kr</p>
-                  <p>국번없이 182</p>
-                </div>
-                <div>
-                  <p className="font-semibold">개인정보보호포털</p>
-                  <p>www.privacy.go.kr</p>
-                  <p>02-2100-3000</p>
-                </div>
-                <div>
-                  <p className="font-semibold">대검찰청 사이버수사과</p>
-                  <p>www.spo.go.kr</p>
-                  <p>02-3480-3573</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 8. 개인정보 처리방침 변경 */}
-          <section
-            id="section8"
-            className="bg-white rounded-2xl p-8 shadow-lg mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              8. 개인정보 처리방침 변경
-            </h2>
-
-            <div className="space-y-6">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">
-                  📅 변경 절차
-                </h3>
-                <ol className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      1
-                    </span>
-                    <span>
-                      개인정보 처리방침이 변경되는 경우 시행일자 및 변경사유를
-                      명시하여 현행 방침과 함께 웹사이트에 게시합니다.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      2
-                    </span>
-                    <span>
-                      중요한 변경사항이 있는 경우 30일 전에 공지하며, 필요 시
-                      개별 통지합니다.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center mr-3 mt-0 flex-shrink-0 text-xs">
-                      3
-                    </span>
-                    <span>
-                      변경된 방침은 게시한 날로부터 효력이 발생합니다.
-                    </span>
-                  </li>
-                </ol>
-              </div>
-
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-blue-800 mb-3">
-                  📋 현재 버전 정보
-                </h3>
-                <div className="space-y-1 text-blue-700">
-                  <p>
-                    <strong>버전:</strong> v1.0
-                  </p>
-                  <p>
-                    <strong>최초 작성일:</strong> 2024년 12월 1일
-                  </p>
-                  <p>
-                    <strong>최종 수정일:</strong> 2024년 12월 15일
-                  </p>
-                  <p>
-                    <strong>시행일자:</strong> 2024년 12월 1일
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 문의 및 상담 */}
-          <div className="bg-gradient-to-r from-lime-600 to-lime-700 rounded-2xl p-8 md:p-12 text-white text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              👹 개인정보 관련 문의가 있으신가요?
-            </h2>
-            <p className="text-lg md:text-xl mb-8 opacity-90">
-              개인정보 처리에 대한 궁금한 점이나 권리 행사를 원하시면
-              <br />
-              언제든지 몬스터티켓 개인정보보호책임자에게 연락해주세요.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); (window as any).startConsult(); }}
-                className="inline-block bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
-              >
-                💬 개인정보 상담
-              </a>
-              <Link
-                to="/checklist"
-                className="inline-block bg-white text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                🛡️ 안전 체크리스트 보기
-              </Link>
-            </div>
-          </div>
+      <LegalSection id="p4" title="4. 개인정보 처리의 위탁">
+        <p>회사는 서비스 운영을 위해 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다.</p>
+        <div className="overflow-x-auto">
+          <table className="mt-2 w-full border border-line text-left text-[12.5px]">
+            <thead className="bg-frost text-ink-soft">
+              <tr>
+                <th className="border-b border-line px-4 py-3 font-semibold">수탁자</th>
+                <th className="border-b border-line px-4 py-3 font-semibold">위탁 업무</th>
+                <th className="border-b border-line px-4 py-3 font-semibold">보유 기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border-b border-line px-4 py-3">채널코퍼레이션(채널톡)</td>
+                <td className="border-b border-line px-4 py-3">1:1 채팅 상담 채널 운영 및 상담 기록 보관</td>
+                <td className="border-b border-line px-4 py-3">위탁 계약 종료 시까지</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3">Google LLC</td>
+                <td className="px-4 py-3">웹 로그 분석 및 광고 전환 측정</td>
+                <td className="px-4 py-3">서비스 이용 기간</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </div>
-  );
-};
+        <p className="mt-3">
+          위탁 업무의 내용이나 수탁자가 변경되는 경우 이 방침을 통해 공개합니다.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="p5" title="5. 정보주체의 권리·의무">
+        <p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
+        <LegalList
+          items={[
+            "개인정보 처리 현황의 통지 요구",
+            "개인정보의 열람 요구",
+            "개인정보의 정정·삭제 요구",
+            "개인정보 처리의 정지 요구",
+          ]}
+        />
+        <p>
+          권리 행사는 고객센터(
+          <a href={site.phoneHref} className="num text-mint-deep underline underline-offset-2">
+            {site.phone}
+          </a>
+          ) 또는 사이트 내 1:1 상담으로 요청할 수 있으며, 회사는 지체 없이(10일 이내) 처리합니다. 법령에서 열람을
+          제한하거나 다른 사람의 권리를 침해할 우려가 있는 경우에는 요청이 제한될 수 있습니다.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="p6" title="6. 개인정보의 파기">
+        <p>보유기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다.</p>
+        <LegalList
+          items={[
+            "전자적 파일 형태: 복구할 수 없는 방법으로 삭제",
+            "종이 문서 형태: 분쇄하거나 소각",
+          ]}
+        />
+        <p>
+          법령에 따라 보존해야 하는 정보는 별도의 저장 공간에 분리 보관하며, 보존 목적 이외의 용도로는 이용하지
+          않습니다.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="p7" title="7. 안전성 확보조치">
+        <LegalList
+          items={[
+            "개인정보에 접근할 수 있는 담당자를 최소한으로 지정하고 접근 권한을 관리합니다.",
+            "상담 정보는 채널톡을 통해 전송 구간이 암호화된 상태로 처리됩니다.",
+            "사이트는 HTTPS로 운영되어 입력 정보가 암호화되어 전송됩니다.",
+            "개인정보 처리 시스템의 접속 기록을 보관하고 위조·변조를 방지합니다.",
+          ]}
+        />
+      </LegalSection>
+
+      <LegalSection id="p8" title="8. 쿠키의 운영 및 거부">
+        <p>
+          회사는 이용 환경을 기억하고 방문 통계를 확인하기 위해 쿠키를 사용합니다. 이용자는 브라우저 설정에서 쿠키
+          저장을 거부하거나 삭제할 수 있습니다. 다만 상담 정보를 기억하는 기능은 쿠키와 브라우저 저장소를 사용하므로,
+          삭제하면 다음 상담 시 성함과 휴대폰 번호를 다시 입력해야 합니다.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="p9" title="9. 개인정보 보호책임자">
+        <p>
+          회사는 개인정보 처리에 관한 업무를 총괄하고 관련 문의와 불만을 처리하기 위해 아래와 같이 개인정보
+          보호책임자를 지정하고 있습니다.
+        </p>
+        <LegalList
+          items={[
+            "개인정보 보호책임자: 몬스터티켓 운영팀",
+            <>
+              연락처:{" "}
+              <a href={site.phoneHref} className="num text-mint-deep underline underline-offset-2">
+                {site.phone}
+              </a>{" "}
+              · 사이트 내 1:1 상담(채널톡)
+            </>,
+          ]}
+        />
+      </LegalSection>
+
+      <LegalSection id="p10" title="10. 고충처리 및 구제방법">
+        <p>
+          개인정보와 관련한 문의는 고객센터로 접수해 주시면 확인 후 안내드립니다. 개인정보 침해에 대한 신고나 상담이
+          필요한 경우 아래 기관에 문의할 수 있습니다.
+        </p>
+        <LegalList
+          items={[
+            "개인정보침해 신고센터 — privacy.kisa.or.kr / 국번 없이 118",
+            "개인정보 분쟁조정위원회 — www.kopico.go.kr / 1833-6972",
+            "대검찰청 사이버수사과 — www.spo.go.kr / 국번 없이 1301",
+          ]}
+        />
+      </LegalSection>
+
+      <LegalSection id="p11" title="11. 처리방침의 변경">
+        <p>
+          이 방침의 내용이 추가·삭제·수정되는 경우 시행 전에 사이트를 통해 공지합니다. 이 방침은 2024년 12월 1일부터
+          시행하며, 2026년 11월 17일 개정되었습니다.
+        </p>
+      </LegalSection>
+    </LegalShell>
+  </>
+);
 
 export default Privacy;
-
