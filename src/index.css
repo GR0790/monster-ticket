@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  /* 기기·브라우저의 다크 모드 설정과 무관하게 항상 밝은 화면만 사용 */
   :root {
+    color-scheme: light only;
     --ink: 11 17 23;
     --mint: 16 185 129;
     --cyan: 6 182 212;
@@ -11,6 +13,8 @@
   }
 
   html {
+    color-scheme: light only;
+    background: #f8fafc;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
   }

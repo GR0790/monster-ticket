@@ -175,22 +175,22 @@ export const Accordion: React.FC<{ items: FaqLike[]; className?: string }> = ({ 
 
 /* ─────────── CTA 밴드 ─────────── */
 export const CTABand: React.FC<{ title: React.ReactNode; body: React.ReactNode }> = ({ title, body }) => (
-  <section className="relative overflow-hidden bg-night text-white">
-    <div aria-hidden="true" className="grid-bg-dark pointer-events-none absolute inset-0 opacity-70" />
+  <section className="relative overflow-hidden border-t border-line bg-gradient-to-b from-white to-frost text-ink">
+    <div aria-hidden="true" className="grid-bg pointer-events-none absolute inset-0 opacity-70" />
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -left-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full opacity-60"
-      style={{ background: "radial-gradient(circle, rgba(16,185,129,0.3) 0%, rgba(11,17,23,0) 70%)" }}
+      className="pointer-events-none absolute -left-24 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full"
+      style={{ background: "radial-gradient(circle, rgba(16,185,129,0.16) 0%, rgba(255,255,255,0) 70%)" }}
     />
     <div className="wrap relative flex flex-col items-start gap-8 py-16 md:flex-row md:items-center md:justify-between md:py-20">
       <div className="max-w-2xl">
-        <p className="eyebrow-light mb-4">Channel talk · 1:1</p>
-        <h2 className="display-section text-white">{title}</h2>
-        <p className="mt-4 text-[14.5px] leading-[1.9] text-white/60">{body}</p>
+        <p className="eyebrow mb-4">Channel talk · 1:1</p>
+        <h2 className="display-section text-ink">{title}</h2>
+        <p className="mt-4 text-[14.5px] leading-[1.9] text-ink-soft">{body}</p>
       </div>
       <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:flex-row">
-        <ConsultButton variant="light" size="lg" label="채널톡 1:1 상담 시작" />
-        <a href={site.phoneHref} className="btn-ghost-light min-h-[54px] shrink-0 whitespace-nowrap px-7 text-[15px]">
+        <ConsultButton variant="primary" size="lg" label="채널톡 1:1 상담 시작" />
+        <a href={site.phoneHref} className="btn-outline min-h-[54px] shrink-0 gap-2 whitespace-nowrap px-7 text-[15px]">
           전화 {site.phone}
         </a>
       </div>

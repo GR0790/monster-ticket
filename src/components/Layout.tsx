@@ -183,35 +183,35 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {children}
       </main>
 
-      <footer className="bg-night-deep text-white">
+      <footer className="border-t border-line bg-white text-ink">
         <div className="wrap py-16 md:py-20">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.1fr]">
             <div>
-              <Wordmark light />
-              <p className="mt-6 max-w-xs text-[13px] leading-[1.9] text-white/55">
+              <Wordmark />
+              <p className="mt-6 max-w-xs text-[13px] leading-[1.9] text-ink-soft">
                 상품권 매입부터 휴대폰·카드 결제 구매, 정보이용료 게임재화까지.
                 확인할 것을 먼저 정리해 안내하는 몬스터티켓입니다.
               </p>
-              <p className="mt-5 text-[11px] font-medium uppercase tracking-[0.26em] text-mint-light/60">
+              <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.26em] text-mint-deep">
                 Verify first · Guide then
               </p>
             </div>
 
             <div>
-              <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-mint-light">비교 · 가이드</h3>
-              <ul className="mt-5 space-y-3 text-[13px] text-white/55">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-mint-deep">비교 · 가이드</h3>
+              <ul className="mt-5 space-y-3 text-[13px] text-ink-soft">
                 <li>
-                  <Link to="/fee-guide" className="transition-colors hover:text-white">
+                  <Link to="/fee-guide" className="transition-colors hover:text-mint-deep">
                     수수료·지급률 비교 가이드
                   </Link>
                 </li>
                 <li>
-                  <Link to="/checklist" className="transition-colors hover:text-white">
+                  <Link to="/checklist" className="transition-colors hover:text-mint-deep">
                     안전한 업체 선택 체크리스트
                   </Link>
                 </li>
                 <li>
-                  <Link to="/authentic-review" className="transition-colors hover:text-white">
+                  <Link to="/authentic-review" className="transition-colors hover:text-mint-deep">
                     진짜 후기 vs 가짜 후기 구별법
                   </Link>
                 </li>
@@ -219,25 +219,25 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </div>
 
             <div>
-              <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-mint-light">안내</h3>
-              <ul className="mt-5 space-y-3 text-[13px] text-white/55">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-mint-deep">안내</h3>
+              <ul className="mt-5 space-y-3 text-[13px] text-ink-soft">
                 <li>
-                  <Link to="/how-to-use" className="transition-colors hover:text-white">
+                  <Link to="/how-to-use" className="transition-colors hover:text-mint-deep">
                     이용 방법
                   </Link>
                 </li>
                 <li>
-                  <Link to="/faq" className="transition-colors hover:text-white">
+                  <Link to="/faq" className="transition-colors hover:text-mint-deep">
                     자주 묻는 질문
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy" className="transition-colors hover:text-white">
+                  <Link to="/privacy" className="transition-colors hover:text-mint-deep">
                     개인정보처리방침
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms" className="transition-colors hover:text-white">
+                  <Link to="/terms" className="transition-colors hover:text-mint-deep">
                     이용약관
                   </Link>
                 </li>
@@ -245,29 +245,29 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </div>
 
             <div>
-              <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-mint-light">상담</h3>
-              <div className="mt-5 space-y-3 text-[13px] text-white/55">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-mint-deep">상담</h3>
+              <div className="mt-5 space-y-3 text-[13px] text-ink-soft">
                 <p>
-                  <a href={site.phoneHref} className="num transition-colors hover:text-white">
+                  <a href={site.phoneHref} className="num transition-colors hover:text-mint-deep">
                     {site.phone}
                   </a>
                 </p>
                 <button
                   type="button"
                   onClick={() => openConsult()}
-                  className="inline-flex items-center gap-2 text-left text-white/80 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 text-left text-ink-soft transition-colors hover:text-mint-deep"
                 >
                   <ChatGlyph className="h-4 w-4" />
                   채널톡 1:1 상담
                 </button>
-                <p className="text-white/35">
+                <p className="text-ink-muted">
                   {site.hoursNote} · {site.hours}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-[11.5px] leading-relaxed text-white/40 md:flex-row md:items-start md:justify-between">
+          <div className="mt-14 flex flex-col gap-4 border-t border-line pt-8 text-[11.5px] leading-relaxed text-ink-muted md:flex-row md:items-start md:justify-between">
             <p className="max-w-2xl">
               몬스터티켓은 상품권과 디지털 이용권의 구매·매입 절차와, 그 전에 확인해야 할 비교 정보를 안내하는
               사이트입니다. 실제 결제와 정산 조건은 통신사·카드사·발행사의 약관과 정책을 따르며, 과도한 결제는

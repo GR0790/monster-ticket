@@ -19,36 +19,40 @@ import { openConsult } from "../lib/consult";
 
 /* ─────────────────────────── 히어로 ─────────────────────────── */
 const Hero: React.FC = () => (
-  <section className="relative overflow-hidden bg-night text-white">
-    <div aria-hidden="true" className="grid-bg-dark pointer-events-none absolute inset-0 opacity-80" />
+  <section className="relative overflow-hidden border-b border-line bg-white text-ink">
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -left-40 top-[-10%] h-[560px] w-[560px] rounded-full opacity-70"
-      style={{ background: "radial-gradient(circle, rgba(16,185,129,0.26) 0%, rgba(11,17,23,0) 68%)" }}
+      className="pointer-events-none absolute inset-0 bg-gradient-to-b from-frost via-white to-white"
+    />
+    <div aria-hidden="true" className="grid-bg pointer-events-none absolute inset-0 opacity-80" />
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute -left-40 top-[-12%] h-[560px] w-[560px] rounded-full"
+      style={{ background: "radial-gradient(circle, rgba(16,185,129,0.14) 0%, rgba(255,255,255,0) 68%)" }}
     />
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -right-24 bottom-[-20%] h-[520px] w-[520px] rounded-full opacity-60"
-      style={{ background: "radial-gradient(circle, rgba(6,182,212,0.22) 0%, rgba(11,17,23,0) 70%)" }}
+      className="pointer-events-none absolute -right-24 bottom-[-22%] h-[520px] w-[520px] rounded-full"
+      style={{ background: "radial-gradient(circle, rgba(6,182,212,0.14) 0%, rgba(255,255,255,0) 70%)" }}
     />
 
-    <div className="wrap relative pb-16 pt-14 md:pb-20 md:pt-20">
+    <div className="wrap relative pb-16 pt-12 md:pb-20 md:pt-16">
       <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <div className="animate-rise">
-          <p className="eyebrow-light mb-6 inline-flex items-center gap-2.5">
-            <span aria-hidden="true" className="h-px w-6 bg-mint-light/60" />
+          <p className="eyebrow mb-6 inline-flex items-center gap-2.5">
+            <span aria-hidden="true" className="h-px w-6 bg-mint/60" />
             Voucher · Billing · Card · Digital
           </p>
-          <h1 className="display-hero text-balance">
+          <h1 className="display-hero text-balance text-ink">
             상품권 매입부터
             <br />
             결제 구매까지,
             <br />
-            <span className="bg-gradient-to-r from-mint-light to-cyan-light bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-mint-deep via-mint to-cyan-deep bg-clip-text text-transparent">
               기준부터 확인합니다.
             </span>
           </h1>
-          <p className="mt-7 max-w-xl text-[15px] leading-[1.95] text-white/65">
+          <p className="mt-7 max-w-xl text-[15.5px] leading-[1.95] text-ink-soft">
             상품권 매입, 휴대폰 소액결제·신용카드 상품권 구매, 정보이용료 게임재화 구매까지.
             <br className="hidden sm:block" />
             확인할 것을 먼저 정리하고, 가능한 범위와 조건을 안내한 뒤 진행합니다.
@@ -56,15 +60,18 @@ const Hero: React.FC = () => (
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <ConsultButton variant="primary" size="lg" label="채널톡 1:1 상담 시작" />
-            <ArrowLink
+            <Link
               to="/fee-guide"
-              className="inline-flex min-h-[54px] items-center justify-center gap-2 border border-white/25 px-7 text-[14px] text-white hover:border-white/60 hover:text-white"
+              className="btn-outline min-h-[54px] px-7 text-[14px] font-semibold whitespace-nowrap"
             >
               수수료 비교 가이드 보기
-            </ArrowLink>
+              <span aria-hidden="true">
+                <ArrowGlyph className="h-3.5 w-3.5" />
+              </span>
+            </Link>
           </div>
 
-          <dl className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-white/50">
+          <dl className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] font-medium text-ink-muted">
             <div className="flex items-center gap-1.5">
               <span aria-hidden="true" className="h-1 w-1 bg-mint" />
               상담 무료
@@ -86,15 +93,15 @@ const Hero: React.FC = () => (
       </div>
 
       {/* 핵심 수치 */}
-      <dl className="mt-14 grid grid-cols-2 gap-y-8 border-t border-white/10 pt-8 md:mt-16 md:grid-cols-4 md:pt-10">
+      <dl className="mt-14 grid grid-cols-2 gap-y-8 border-t border-line pt-8 md:mt-16 md:grid-cols-4 md:pt-10">
         {heroValues.map((v) => (
-          <div key={v.label} className="border-white/10 md:border-l md:pl-6 md:first:border-l-0 md:first:pl-0">
-            <dt className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">{v.label}</dt>
+          <div key={v.label} className="border-line md:border-l md:pl-6 md:first:border-l-0 md:first:pl-0">
+            <dt className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-muted">{v.label}</dt>
             <dd className="mt-2 flex items-baseline gap-1.5">
-              <span className="display-sub text-white">{v.value}</span>
-              <span className="text-[12px] text-white/50">{v.unit}</span>
+              <span className="display-sub text-ink">{v.value}</span>
+              <span className="text-[12.5px] font-medium text-ink-muted">{v.unit}</span>
             </dd>
-            <dd className="mt-1 text-[11.5px] text-white/40">{v.note}</dd>
+            <dd className="mt-1 text-[12px] text-ink-soft">{v.note}</dd>
           </div>
         ))}
       </dl>
@@ -257,12 +264,11 @@ const FeeSection: React.FC = () => (
 
 /* ─────────────────────────── 안전 체크리스트 ─────────────────────────── */
 const ChecklistSection: React.FC = () => (
-  <section className="relative overflow-hidden bg-night py-20 text-white md:py-24">
-    <div aria-hidden="true" className="grid-bg-dark pointer-events-none absolute inset-0 opacity-70" />
+  <section className="relative overflow-hidden border-b border-line bg-frost py-20 text-ink md:py-24">
+    <div aria-hidden="true" className="grid-bg pointer-events-none absolute inset-0 opacity-70" />
     <div className="wrap relative">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHead
-          light
           eyebrow="Safety checklist"
           title={
             <>
@@ -273,19 +279,22 @@ const ChecklistSection: React.FC = () => (
           }
           lead="급한 마음에 놓치기 쉬운 부분들을 미리 점검할 수 있게 정리했습니다."
         />
-        <ArrowLink to="/checklist" className="shrink-0 text-mint-light hover:text-white">
+        <ArrowLink to="/checklist" className="shrink-0">
           체크리스트 전체 보기
         </ArrowLink>
       </div>
 
-      <ol className="mt-12 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+      <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {checklistItems.map((item, i) => (
-          <li key={item.title} className="bg-night p-6 md:p-7">
-            <span className="num text-[11px] font-semibold tracking-[0.24em] text-mint-light/80">
+          <li
+            key={item.title}
+            className="card card-lift border-line bg-white p-6 md:p-7"
+          >
+            <span className="num text-[11px] font-semibold tracking-[0.24em] text-mint-deep">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-4 text-[14px] font-semibold leading-snug text-white">{item.title}</h3>
-            <p className="mt-2 text-[12.5px] leading-[1.8] text-white/55">{item.body}</p>
+            <h3 className="mt-4 text-[14.5px] font-semibold leading-snug text-ink">{item.title}</h3>
+            <p className="mt-2 text-[13px] leading-[1.8] text-ink-soft">{item.body}</p>
           </li>
         ))}
       </ol>

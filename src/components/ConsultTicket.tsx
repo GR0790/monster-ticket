@@ -23,7 +23,7 @@ const ConsultTicket: React.FC<{ className?: string }> = ({ className = "" }) => 
       type="button"
       onClick={handleClick}
       aria-label="몬스터티켓 채널톡 1:1 상담 연결"
-      className={`group relative block w-full max-w-[420px] overflow-hidden border border-white/15 bg-white text-left shadow-[0_40px_80px_-40px_rgba(0,0,0,0.85)] transition-shadow duration-300 hover:shadow-[0_50px_90px_-38px_rgba(16,185,129,0.5)] ${bounceClass} ${className}`}
+      className={`group relative block w-full max-w-[420px] overflow-hidden border border-line bg-white text-left shadow-[0_34px_70px_-40px_rgba(15,23,42,0.45)] ring-1 ring-white/70 transition-shadow duration-300 hover:shadow-[0_44px_80px_-38px_rgba(16,185,129,0.45)] ${bounceClass} ${className}`}
       style={{ borderRadius: 8, transformOrigin: "center" }}
     >
       {/* 글레어: 클릭 시 한 번 번지는 빛 */}
@@ -64,7 +64,7 @@ const ConsultTicket: React.FC<{ className?: string }> = ({ className = "" }) => 
           />
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-4 bottom-1 h-2.5 rounded-[100%] bg-night/10 blur-[5px]"
+            className="pointer-events-none absolute inset-x-4 bottom-1 h-2.5 rounded-[100%] bg-ink/10 blur-[5px]"
           />
           <img
             src="/monster-mascot-cut.webp"
@@ -100,8 +100,8 @@ const ConsultTicket: React.FC<{ className?: string }> = ({ className = "" }) => 
       {/* 티켓 절취선 + 노치 */}
       <span aria-hidden="true" className="relative mt-5 block h-px">
         <span className="absolute inset-x-5 top-0 border-t border-dashed border-line" />
-        <span className="absolute -left-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-night" />
-        <span className="absolute -right-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-night" />
+        <span className="absolute -left-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-white" />
+        <span className="absolute -right-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-white" />
       </span>
 
       {/* 하단 액션 */}
