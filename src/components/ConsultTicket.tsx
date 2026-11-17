@@ -55,15 +55,24 @@ const ConsultTicket: React.FC<{ className?: string }> = ({ className = "" }) => 
       </span>
 
       {/* 마스코트 */}
-      <span className="relative flex items-center gap-4 px-5 pt-5">
-        <span className="relative h-[76px] w-[76px] shrink-0 overflow-hidden rounded-full border border-line bg-frost">
+      <span className="relative flex items-center gap-3 px-5 pt-4">
+        <span className="relative h-[96px] w-[96px] shrink-0 sm:h-[108px] sm:w-[108px]">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-full"
+            style={{ background: "radial-gradient(circle at 50% 46%, rgba(16,185,129,0.16) 0%, rgba(16,185,129,0) 70%)" }}
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-4 bottom-1 h-2.5 rounded-[100%] bg-night/10 blur-[5px]"
+          />
           <img
-            src="/monster-mascot.webp"
+            src="/monster-mascot-cut.webp"
             alt="몬스터티켓 마스코트"
-            width="76"
-            height="76"
+            width="108"
+            height="109"
             loading="eager"
-            className="h-full w-full object-cover animate-mascot-float"
+            className="relative h-full w-full object-contain animate-mascot-float drop-shadow-[0_12px_18px_rgba(11,17,23,0.18)]"
           />
         </span>
         <span className="min-w-0">
