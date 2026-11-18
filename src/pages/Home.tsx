@@ -43,13 +43,13 @@ const Hero: React.FC = () => (
             <span aria-hidden="true" className="h-px w-6 bg-mint/60" />
             Voucher · Billing · Card · Digital
           </p>
-          <h1 className="display-hero text-balance text-ink">
+          <h1 className="display-hero text-balance break-keep text-ink">
             상품권 매입부터
             <br />
             결제 구매까지,
             <br />
             <span className="bg-gradient-to-r from-mint-deep via-mint to-cyan-deep bg-clip-text text-transparent">
-              기준부터 확인합니다.
+              쉽고 빠르게 안내합니다.
             </span>
           </h1>
           <p className="mt-7 max-w-xl text-[15.5px] leading-[1.95] text-ink-soft">
